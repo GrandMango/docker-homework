@@ -11,3 +11,4 @@ localhost:8080 将得到来自 Alice 处理后的 Hello from bob 字符串
 
 docker-compose up
 
+#3: 克隆工程后，在 alice，bob 目录下运行 ./gradlew build 后在主目录下运行 docerk-compose up 即可
