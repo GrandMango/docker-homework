@@ -1,4 +1,4 @@
-两个服务单独配置启动时，需要以下命令：
+#1：两个服务单独配置启动时，需要以下命令：
 
 docker run --name bob   -d -p 8088:8088 spring-app-bob:1.0
 docker run --name alice --link bob:bob -d -p 8080:8080 spring-app-alice:1.0
@@ -6,3 +6,8 @@ docker run --name alice --link bob:bob -d -p 8080:8080 spring-app-alice:1.0
 本机访问：
 localhost:8088 将得到来自 Bob 的 json 串
 localhost:8080 将得到来自 Alice 处理后的 Hello from bob 字符串
+
+#2：若使用 docker-compose 启动，则：
+
+docker-compose up
+
